@@ -1,0 +1,104 @@
+{
+  "id": "12301",
+  "questions": [
+    {
+      "question": "Câu hỏi 1",
+      "answer": "24222523",
+      "type": "image",
+      "link": "/1.png"
+    },
+    {
+      "question": "Câu hỏi 2",
+      "answer": "5",
+      "type": "image",
+      "link": "/3.png"
+    },
+    {
+      "question": "Câu hỏi 3",
+      "answer": "3316",
+      "type": "image",
+      "link": "/6.png"
+    },
+    {
+      "question": "Câu hỏi 4",
+      "answer": "5h25",
+      "type": "image",
+      "link": "/18.png"
+    },
+    {
+      "question": "Câu hỏi 5",
+      "answer": "8h05",
+      "type": "image",
+      "link": "/32.png"
+    },
+    {
+      "question": "Câu hỏi 6",
+      "answer": "44",
+      "type": "image",
+      "link": "/34.png"
+    },{
+      "question": "Câu hỏi 7",
+      "answer": "5h05",
+      "type": "image",
+      "link": "/38.png"
+    },{
+      "question": "Câu hỏi 8",
+      "answer": "2h45",
+      "type": "image",
+      "link": "/39.png"
+    },{
+      "question": "Câu hỏi 9",
+      "answer": "14",
+      "type": "image",
+      "link": "/40.png"
+    },{
+      "question": "Câu hỏi 10",
+      "answer": "9h15",
+      "type": "image",
+      "link": "/41.png"
+    },{
+      "question": "Câu hỏi 11",
+      "answer": "21",
+      "type": "image",
+      "link": "/48.png"
+    },{
+      "question": "Câu hỏi 12",
+      "answer": "8812",
+      "type": "image",
+      "link": "/55.png"
+    },{
+      "question": "Câu hỏi 13",
+      "answer": "52416",
+      "type": "image",
+      "link": "/71.png"
+    },{
+      "question": "Câu hỏi 14",
+      "answer": "64256",
+      "type": "image",
+      "link": "/74.png"
+    },{
+      "question": "Câu hỏi 15",
+      "answer": "39",
+      "type": "image",
+      "link": "/79.png"
+    },{
+      "question": "Câu hỏi 16",
+      "answer": "12h30",
+      "type": "image",
+      "link": "/93.png"
+    },{
+      "question": "Câu hỏi 17",
+      "answer": "4h20",
+      "type": "image",
+      "link": "/117.png"
+    },{
+      "question": "Câu hỏi 18",
+      "answer": "48",
+      "type": "image",
+      "link": "/118.png"
+    }
+
+
+  ]
+  
+}

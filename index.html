@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SangMath</title>
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+    }
+
+    #question {
+      width: 100%;
+    }
+
+    #answer {
+      margin-top: 12px;
+      font-size: 20px;
+    }
+
+    #img {
+      max-width: 90%;
+    }
+
+    #submit {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      width: 132px;
+      font-size: 20px;
+      background: royalblue;
+      color: white;
+      padding: 0.7em 1em;
+      padding-left: 0.9em;
+      align-items: center;
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <div>
+      <img id="img"></img>
+    </div>
+    <div>
+      <span id="question"></span>
+    </div>
+    <div>
+      <input id="answer" placeholder="Câu trả lời" type="text">
+    </div>
+    <div>
+      <button id="submit">Trả lời</button>
+    </div>
+  </div>
+
+  <script>
+
+    async function main() {
+      const data = await (await fetch('/data1.json')).json() // tuỳ chỉnh bộ câu hỏi
+
+      const questions = data.questions
+      const id = data.id
+
+      let idx = 0
+      const idLs = localStorage.getItem(id)
+      if (idLs) {
+        idx = idLs
+      } else {
+        localStorage.clear()
+        localStorage.setItem(id, idx)
+      }
+
+      const question = document.getElementById('question')
+      const img = document.getElementById('img')
+      const answer = document.getElementById('answer')
+      const submit = document.getElementById('submit')
+
+      const show = (i) => {
+        const value = questions[i]
+        localStorage.setItem(id, i)
+        question.textContent = value.question
+        if (value.type === 'image') {
+          img.src = '/image' + value.link
+          img.style.display = ''
+        } else {
+          img.style.display = 'none'
+        }
+        answer.value = ''
+      }
+      show(idx)
+
+      submit.addEventListener('click', () => {
+        const asValue = answer.value
+        if (asValue === questions[idx].answer) {
+          idx++
+          if (idx === questions.length) {
+            // thông báo khi trả lời đúng hết câu hỏi 
+            alert('Chúc Mừng Bạn Đã Về Đích!')
+          } else {
+            show(idx)
+          }
+        } else {
+
+          // thông báo khi nhập sai
+          alert('Bạn đã nhập sai')
+        }
+      })
+    }
+    main()
+  </script>
+</body>
+
+</html>
